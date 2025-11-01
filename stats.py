@@ -21,3 +21,15 @@ def sorted_dict(dict_to_sort):
 def print_each_character(characters):
     for character in characters:
         print(f"{character}: {characters[character]}")
+
+def most_common_words(text):
+    split_string = text.split()
+    counting_words = {}
+    for word in split_string:
+        if word not in counting_words:
+            counting_words[word] = 1
+        else:
+            counting_words[word] += 1
+    sorted_words = dict(sorted(counting_words.items(), key=lambda item: item[1], reverse=True)[:10])
+    for i in sorted_words:
+        print(f"{i}: {sorted_words[i]}")

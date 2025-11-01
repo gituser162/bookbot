@@ -15,6 +15,8 @@ def main():
     print(f"Analyzing book found at {book_path}...")
     print("----------- Word Count ----------")
     print(f"Found {words_counter(text)} total words")
+    print("---- Top 10 most common words ---")
+    most_common_words(text)
     print("--------- Character Count -------")
     print_each_character(sorted_characters)
     print("============= END ===============")
